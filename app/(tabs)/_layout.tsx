@@ -46,11 +46,29 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="overlayCameraObj"
+        options={{
+          title: "Overlay",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="paperplane.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="showMedia"
+        options={{
+          title: "Media",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="folderimages" color={color} />
+          ),
+        }}
+      />
+            <Tabs.Screen
         name="cameraObj"
         options={{
           title: "Camera",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <IconSymbol size={28} name="camera" color={color} />
           ),
         }}
       />

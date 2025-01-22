@@ -3,6 +3,7 @@ import { View, Button, Image, Alert, Text } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import * as FileSystem from "expo-file-system";
 import * as Location from "expo-location";
+import ExtractImageMetadata from "@/components/ExtractImageMetadata";
 
 const CameraObj: React.FC = () => {
   const [image, setImage] = useState<string | null>(null);
@@ -65,6 +66,27 @@ const CameraObj: React.FC = () => {
     }
   };
 
+  const extractMetaData = async () => {    
+    console.info("Saving image to local storage.");
+    if (image) {
+        const handleExtractMetadata = async (imageUri: string) => {
+        try {
+          const metadata = await ExtractImageMetadata(imageUri);
+          console.log('Extracted Metadata:', metadata);
+        } catch (error) {
+          console.error('Error handling metadata extraction:', error);
+        }
+      };
+
+      const gps = handleExtractMetadata(image);
+      gps.then((result) => {
+        console.log(`result: ${result}`);
+      }).catch((error) => {
+        console.error(`error: ${error}`);
+      });
+    }
+  };
+
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Button title="Open Camera" onPress={openCamera} />
@@ -80,6 +102,7 @@ const CameraObj: React.FC = () => {
             <View>
             <Button title="Save Image" onPress={saveImageToLocal} />
             <Text style={{color: "red", fontSize: 30}}>{location?JSON.stringify(location):"Unknown"}</Text>
+            <Button title="Save Image" onPress={extractMetaData} />
             </View>
           </View>
         </>
