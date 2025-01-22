@@ -31,45 +31,42 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
           title: "Explore",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
       <Tabs.Screen
         name="overlayCameraObj"
         options={{
           title: "Overlay",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="photo-camera" color={color} />,
         }}
       />
       <Tabs.Screen
         name="showMedia"
         options={{
           title: "Media",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="folderimages" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="image" color={color} />,
         }}
       />
-            <Tabs.Screen
+      <Tabs.Screen
         name="cameraObj"
         options={{
           title: "Camera",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="camera" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="camera" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="MapWithCoordinates"
+        options={{
+          title: "Area",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="wallpaper" color={color} />,
         }}
       />
     </Tabs>

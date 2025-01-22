@@ -12,8 +12,10 @@ const MAPPING = {
   'house.fill': 'home',
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
-  'chevron.right': 'chevron-right',
-  'camera': 'camera'
+  'image': 'image',
+  'camera': 'camera',
+  'photo-camera': 'photo-camera',
+  'wallpaper': 'wallpaper',
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
