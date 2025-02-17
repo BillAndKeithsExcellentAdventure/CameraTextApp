@@ -69,6 +69,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="wallpaper" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="JobDatabase"
+        options={{
+          title: "DB",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="wallpaper" color={color} />,
+        }}
+      />      
     </Tabs>
   );
 }

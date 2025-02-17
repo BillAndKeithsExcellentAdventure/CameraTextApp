@@ -1,4 +1,4 @@
-import MapWithAreaCalculation from "@/components/MapWithAreaCalculations";
+import MapWithAreaCalculation from "@/components/MapWithAreaCalculations.native";
 
 const MapWithCoordinates: React.FC = () => {
    
